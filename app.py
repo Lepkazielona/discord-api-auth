@@ -24,7 +24,7 @@ def auth():
 
 
 @app.route('/htmlTest/')
-def auth():
+def htmlTest():
     return """
     <p>Hello World</p>
     """
