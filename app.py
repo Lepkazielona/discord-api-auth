@@ -23,6 +23,13 @@ def auth():
     return userInfo
 
 
+@app.route('/htmlTest/')
+def auth():
+    return """
+    <p>Hello World</p>
+    """
+
+
 def exchange_code(code):
     data = {
         'client_id': CLIENT_ID,
