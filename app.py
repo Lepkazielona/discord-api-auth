@@ -31,6 +31,7 @@ def exchange_code(code):
     }
     r = requests.post('%s/oauth2/token' % API_ENDPOINT, data=data, headers=headers)
     r.raise_for_status()
+    print(r.text)
     return r.json()
 
 
@@ -41,6 +42,7 @@ def user_details(token):
 
     r = requests.get('%s/users/@me' % API_ENDPOINT, headers=headers)
     r.raise_for_status()
+    print(r.text)
     return r.json()
 
 
@@ -55,6 +57,8 @@ def add_guild(token, userid):
 
     r = requests.put(f'%s/guilds/{GUILD_ID}/members/{userid}' % API_ENDPOINT, headers=headers, json=data)
     r.raise_for_status()
+    #print(r.text)
+    #return r.json()
 
 
 if __name__ == '__main__':
