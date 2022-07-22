@@ -1,7 +1,12 @@
 from flask import Flask, request
 import requests
+import sys
+import logging
 
 app = Flask(__name__)
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 API_ENDPOINT = 'https://discord.com/api'
 CLIENT_ID = '838414833790484551'
