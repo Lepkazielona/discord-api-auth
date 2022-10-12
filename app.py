@@ -9,11 +9,11 @@ app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
 API_ENDPOINT = 'https://discord.com/api'
-CLIENT_ID = '838414833790484551'
-CLIENT_SECRET = 'YgoqPRUQ9uJgbArgieLl571VjYOMx9xE'
+CLIENT_ID = 'CLIENT_ID'
+CLIENT_SECRET = 'CLIENT_SECRET'
 REDIRECT_URI = 'http://localhost:5000/auth/'
-GUILD_ID = '990292899210080339'
-BOT_TOKEN = 'ODM4NDE0ODMzNzkwNDg0NTUx.GHCglS.rAD5h3D_QGcsUtLtJM9LLGVd_kVyA6A1bmM2ys'
+GUILD_ID = 'GUILD_ID'
+BOT_TOKEN = 'DC_BOT_TOKEN'
 
 @app.route('/auth/')
 def auth():
